@@ -224,6 +224,28 @@ uint32_t memcached_server_response_count(const memcached_server_instance_st self
   return self->cursor_active_;
 }
 
+uint32_t memcached_server_weight(const memcached_server_instance_st self)
+{
+  WATCHPOINT_ASSERT(self);
+  if (self == NULL)
+  {
+    return 0;
+  }
+
+  return self->weight;
+}
+
+int32_t memcached_server_state(const memcached_server_instance_st self)
+{
+  WATCHPOINT_ASSERT(self);
+  if (self == NULL)
+  {
+    return -1;
+  }
+
+  return self->state;
+}
+
 const char *memcached_server_type(const memcached_server_instance_st ptr)
 {
   if (ptr)

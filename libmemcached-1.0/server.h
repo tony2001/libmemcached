@@ -98,6 +98,12 @@ LIBMEMCACHED_API
 uint32_t memcached_server_response_count(const memcached_server_instance_st self);
 
 LIBMEMCACHED_API
+uint32_t memcached_server_weight(const memcached_server_instance_st self);
+
+LIBMEMCACHED_API
+int32_t memcached_server_state(const memcached_server_instance_st self);
+
+LIBMEMCACHED_API
 const char *memcached_server_name(const memcached_server_instance_st self);
 
 LIBMEMCACHED_API
